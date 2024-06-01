@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#root {
+  --seeable: #dac500;
+}
+
+@layer components {
+  .text-outline-seeable {
+    text-shadow: -2px -2px 0 var(--seeable), 2px -2px 0 var(--seeable),
+      -2px 2px 0 var(--seeable), 2px 2px 0 var(--seeable);
+  }
+}
+
+html {
+  background-color: #181818;
+  color: white;
+}
