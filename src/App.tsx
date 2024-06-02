@@ -1,5 +1,6 @@
 import { useState } from "react";
 import InitialAnimation from "./components/sections/initial-animation/InitialAnimation";
+import MainPage from "./components/sections/main-page/MainPage";
 
 function App() {
   const [isShowingInitialAnimation, setIsShowingInitialAnimation] =
@@ -13,7 +14,7 @@ function App() {
   return isShowingInitialAnimation ? (
     <InitialAnimation handleCancelInitialAnimation={cancelInitialAnimation} />
   ) : (
-    <div>App</div>
+    <MainPage />
   );
 }
 

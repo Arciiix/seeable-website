@@ -17,3 +17,10 @@ html {
   background-color: #181818;
   color: white;
 }
+
+.open div:first-child {
+  @apply translate-y-1.5 rotate-45;
+}
+.open div:last-child {
+  @apply -translate-y-1 -rotate-45;
+}
