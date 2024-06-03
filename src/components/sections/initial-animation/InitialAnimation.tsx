@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import Button from "../../ui/buttons/Button";
+import { DEVICE_FRAMES_FILENAMES } from "../../animations/DeviceScrollAnimation";
 
 type InitialAnimationProps = {
   handleCancelInitialAnimation: () => void;
@@ -12,6 +13,27 @@ type AnimationStage =
   | "dark"
   | "feelsHard"
   | "done";
+
+let alreadyCachedImages = false;
+
+// A function that preloads images for the scroll animation of the Seeable device
+const preloadImages = async () => {
+  if (alreadyCachedImages) return;
+  alreadyCachedImages = true;
+  console.log("Preload images");
+
+  const promises = await DEVICE_FRAMES_FILENAMES.map((src) => {
+    return new Promise((resolve, reject) => {
+      const img = new Image();
+      img.src = src;
+      img.onload = resolve;
+      img.onerror = reject;
+    });
+  });
+  await Promise.all(promises);
+
+  console.log("Images preloaded");
+};
 
 export default function InitialAnimation({
   handleCancelInitialAnimation,
@@ -40,6 +62,8 @@ export default function InitialAnimation({
         handleCancelInitialAnimation();
       }, 13500),
     ];
+
+    preloadImages();
 
     return () => {
       timeouts.forEach((timeout) => clearTimeout(timeout));

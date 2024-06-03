@@ -4,6 +4,7 @@ import {
   IconMoodHeart,
 } from "@tabler/icons-react";
 import Phone from "../../ui/phone/Phone";
+import DeviceScrollAnimation from "../../animations/DeviceScrollAnimation";
 
 export default function Hero() {
   return (
@@ -51,11 +52,12 @@ export default function Hero() {
                 alt="Seeable - proof of concept"
               /> */}
               <Phone />
-              <img
+              {/* <img
                 src="/images/seeable-poc.png"
                 className="md:h-[500px]"
                 alt="Seeable - proof of concept"
-              />
+              /> */}
+              <DeviceScrollAnimation />
             </div>
             <div className="py-8 border-y border-gray-100 dark:border-gray-800 gap-3 flex flex-col sm:flex-row justify-between">
               <div className="text-left">
