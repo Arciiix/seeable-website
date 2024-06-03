@@ -52,12 +52,15 @@ export default function Hero() {
                 alt="Seeable - proof of concept"
               /> */}
               <Phone />
-              {/* <img
-                src="/images/seeable-poc.png"
-                className="md:h-[500px]"
-                alt="Seeable - proof of concept"
-              /> */}
-              <DeviceScrollAnimation />
+              <div className="relative">
+                <div className="absolute transition-all duration-1000 opacity-30 inset-16 bg-gradient-to-r from-seeable via-amber-400 to-yellow-500 rounded-xl blur-3xl"></div>
+                <img
+                  src="/images/seeable-poc.png"
+                  className="relative md:h-[500px]"
+                  alt="Seeable - proof of concept"
+                />
+              </div>
+              {/* <DeviceScrollAnimation /> */}
             </div>
             <div className="py-8 border-y border-gray-100 dark:border-gray-800 gap-3 flex flex-col sm:flex-row justify-between">
               <div className="text-left">

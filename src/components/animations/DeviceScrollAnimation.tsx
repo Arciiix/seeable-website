@@ -11,7 +11,7 @@ export default function DeviceScrollAnimation() {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const wrapperRef = useRef<HTMLDivElement | null>(null);
 
-  const [height, setHeight] = useState(400);
+  const [height, setHeight] = useState(300);
 
   const { scrollYProgress } = useScroll({
     target: wrapperRef,
@@ -27,8 +27,8 @@ export default function DeviceScrollAnimation() {
     const img = new Image();
     img.src = DEVICE_FRAMES_FILENAMES[frameIndex];
 
-    // From 400px to 500px
-    setHeight(500 - latest * 100);
+    // From 300px to 400px
+    setHeight(400 - latest * 100);
     img.onload = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       ctx.drawImage(img, 0, 0);
@@ -51,7 +51,7 @@ export default function DeviceScrollAnimation() {
   }, []);
 
   return (
-    <div ref={(r) => (wrapperRef.current = r)}>
+    <div className="w-80" ref={(r) => (wrapperRef.current = r)}>
       <canvas
         ref={(r) => (canvasRef.current = r)}
         className="sticky transition-all"
