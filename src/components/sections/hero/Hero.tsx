@@ -4,7 +4,6 @@ import {
   IconMoodHeart,
 } from "@tabler/icons-react";
 import Phone from "../../ui/phone/Phone";
-import DeviceScrollAnimation from "../../animations/DeviceScrollAnimation";
 
 export default function Hero() {
   return (

@@ -12,6 +12,12 @@ export default {
         secondary: "#ff7e33",
         info: "#0C63E7",
       },
+      dropShadow: {
+        glow: [
+          "0 0px 20px rgba(255,255, 255, 0.35)",
+          "0 0px 65px rgba(255, 255,255, 0.2)",
+        ],
+      },
       fontFamily: {
         rubik: ["Rubik", "sans-serif"],
       },

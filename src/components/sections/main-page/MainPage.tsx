@@ -1,3 +1,4 @@
+import Cards from "../cards/Cards";
 import Header from "../header/Header";
 import Hero from "../hero/Hero";
 
@@ -6,6 +7,7 @@ export default function MainPage() {
     <div>
       <Header />
       <Hero />
+      <Cards />
     </div>
   );
 }
