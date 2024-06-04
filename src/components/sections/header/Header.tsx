@@ -4,6 +4,9 @@ import { useState } from "react";
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const params = new URLSearchParams(window.location.search);
+  const fromPortfolio = params.get("fromPortfolio") === "true";
+
   const handleToggle = () => {
     setMenuOpen(!menuOpen);
   };
@@ -15,6 +18,17 @@ export default function Header() {
 
   return (
     <header className="font-rubik">
+      {fromPortfolio ? (
+        <div className="w-full bg-seeable-dark bg-opacity-30 p-3 text-seeable font-medium text-center">
+          <a
+            className="hover:text-yellow-100 transition-all
+        "
+            href="https://arturnowak.netlify.app/"
+          >
+            ✨ {fromPortfolio ? "Go back to" : "Go check my"} portfolio
+          </a>
+        </div>
+      ) : null}
       <nav className="w-full absolute border-b z-10 lg:border-transparent">
         <div className="px-6 max-w-7xl mx-auto xl:px-6 md:px-12">
           <div className="relative py-3 flex flex-wrap gap-6 items-center justify-between md:py-4 md:gap-0">
