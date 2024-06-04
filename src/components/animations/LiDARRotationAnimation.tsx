@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 export const NUMBER_OF_FRAMES = 76;
 export const ROTATION_FRAMES_FILENAME = Array.from(
   { length: NUMBER_OF_FRAMES },
-  (_, i) => i + 1
+  (_, i) => i
 ).map((i) => `/rotation-frames/frame_${i.toString().padStart(2, "0")}.png`);
 
 export default function LiDARRotationAnimation() {

@@ -4,6 +4,7 @@ import {
   IconMoodHeart,
 } from "@tabler/icons-react";
 import Phone from "../../ui/phone/Phone";
+import { AnimatePresence, motion } from "framer-motion";
 
 export default function Hero() {
   return (
@@ -18,32 +19,59 @@ export default function Hero() {
       <div>
         <div className="relative pt-36 ml-auto">
           <div className="lg:w-2/3 text-center mx-auto">
-            <h1 className="text-white font-bold text-5xl md:text-6xl xl:text-7xl">
-              Everybody deserves to see.
-            </h1>
-            <p className="mt-8 text-gray-700 dark:text-gray-300">
-              Introducing Seeable - a reliable{" "}
-              <b>companion for safe and hassle-free navigation</b>, designed for
-              wheelchair users with visual impairments and beyond! Seeable
-              seamlessly integrates cutting-edge technology with user-friendly
-              features. Seeable's commitment to users feedback (we make sure to
-              communicate a lot with real visually impaired individuals) ensures
-              continual improvement and innovation.{" "}
-              <b>
-                Explore the world with confidence – one obstacle at a time, with
-                Seeable by your side!
-              </b>
-            </p>
-            <div className="mt-16 flex flex-wrap justify-center gap-y-4 gap-x-6">
-              <a
-                href="#"
-                className="relative flex h-11 w-full items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max"
+            <AnimatePresence>
+              <h1 key="title">
+                {"Everybody deserves to see.".split(" ").map((element, i) => (
+                  <motion.span
+                    key={element}
+                    className="text-white font-bold text-5xl md:text-6xl xl:text-7xl mx-2"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{
+                      duration: 0.8,
+                      delay: i * 0.7,
+                    }}
+                  >
+                    {element}
+                  </motion.span>
+                ))}
+              </h1>
+              <motion.p
+                key="description"
+                className="mt-8 text-gray-700 dark:text-gray-300"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 2.5 }}
               >
-                <span className="relative text-base font-semibold text-white">
-                  Get started
-                </span>
-              </a>
-            </div>
+                Introducing Seeable - a reliable{" "}
+                <b>companion for safe and hassle-free navigation</b>, designed
+                for wheelchair users with visual impairments and beyond! Seeable
+                seamlessly integrates cutting-edge technology with user-friendly
+                features. Seeable's commitment to users feedback (we make sure
+                to communicate a lot with real visually impaired individuals)
+                ensures continual improvement and innovation.{" "}
+                <b>
+                  Explore the world with confidence – one obstacle at a time,
+                  with Seeable by your side!
+                </b>
+              </motion.p>
+              <motion.div
+                key="button"
+                className="mt-16 flex flex-wrap justify-center gap-y-4 gap-x-6"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 3.5 }}
+              >
+                <a
+                  href="#"
+                  className="relative flex h-11 w-full items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max"
+                >
+                  <span className="relative text-base font-semibold text-white">
+                    Get started
+                  </span>
+                </a>
+              </motion.div>
+            </AnimatePresence>
             <div className="flex items-center justify-center mt-10 flex-col md:flex-row-reverse">
               {/* <img
                 src="/images/app-1.png"
