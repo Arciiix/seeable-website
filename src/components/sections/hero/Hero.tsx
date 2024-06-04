@@ -59,7 +59,6 @@ export default function Hero() {
                   alt="Seeable - proof of concept"
                 />
               </div>
-              {/* <DeviceScrollAnimation /> */}
             </div>
             <div className="py-8 border-y border-gray-100 dark:border-gray-800 gap-3 flex flex-col sm:flex-row justify-between">
               <div className="text-left">

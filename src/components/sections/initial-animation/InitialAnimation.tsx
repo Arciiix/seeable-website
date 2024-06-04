@@ -1,7 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import Button from "../../ui/buttons/Button";
-// import { DEVICE_FRAMES_FILENAMES } from "../../animations/DeviceScrollAnimation";
+import { ROTATION_FRAMES_FILENAME } from "../../animations/LiDARRotationAnimation";
 
 type InitialAnimationProps = {
   handleCancelInitialAnimation: () => void;
@@ -14,26 +14,26 @@ type AnimationStage =
   | "feelsHard"
   | "done";
 
-// let alreadyCachedImages = false;
+let alreadyCachedImages = false;
 
-// A function that preloads images for the scroll animation of the Seeable device
-// const preloadImages = async () => {
-//   if (alreadyCachedImages) return;
-//   alreadyCachedImages = true;
-//   console.log("Preload images");
+// A function that preloads images for the scroll animation of the LiDAR
+const preloadImages = async () => {
+  if (alreadyCachedImages) return;
+  alreadyCachedImages = true;
+  console.log("Preload images");
 
-//   const promises = await DEVICE_FRAMES_FILENAMES.map((src) => {
-//     return new Promise((resolve, reject) => {
-//       const img = new Image();
-//       img.src = src;
-//       img.onload = resolve;
-//       img.onerror = reject;
-//     });
-//   });
-//   await Promise.all(promises);
+  const promises = await ROTATION_FRAMES_FILENAME.map((src) => {
+    return new Promise((resolve, reject) => {
+      const img = new Image();
+      img.src = src;
+      img.onload = resolve;
+      img.onerror = reject;
+    });
+  });
+  await Promise.all(promises);
 
-//   console.log("Images preloaded");
-// };
+  console.log("Images preloaded");
+};
 
 export default function InitialAnimation({
   handleCancelInitialAnimation,
@@ -63,8 +63,7 @@ export default function InitialAnimation({
       }, 13500),
     ];
 
-    // DEV TODO: Think whether to choose animation or still image
-    // preloadImages();
+    preloadImages();
 
     return () => {
       timeouts.forEach((timeout) => clearTimeout(timeout));

@@ -1,17 +1,15 @@
 import { useMotionValueEvent, useScroll } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
-export const NUMBER_OF_FRAMES = 54;
-export const DEVICE_FRAMES_FILENAMES = Array.from(
+export const NUMBER_OF_FRAMES = 76;
+export const ROTATION_FRAMES_FILENAME = Array.from(
   { length: NUMBER_OF_FRAMES },
   (_, i) => i + 1
-).map((i) => `/device-frames/frame_${i}.png`);
+).map((i) => `/rotation-frames/frame_${i.toString().padStart(2, "0")}.png`);
 
-export default function DeviceScrollAnimation() {
+export default function LiDARRotationAnimation() {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const wrapperRef = useRef<HTMLDivElement | null>(null);
-
-  const [height, setHeight] = useState(300);
 
   const { scrollYProgress } = useScroll({
     target: wrapperRef,
@@ -25,10 +23,8 @@ export default function DeviceScrollAnimation() {
     // Latest is a value between 0 and 1. Let's assume we end at 80% of the scroll
     const frameIndex = NUMBER_OF_FRAMES - Math.floor(latest * NUMBER_OF_FRAMES);
     const img = new Image();
-    img.src = DEVICE_FRAMES_FILENAMES[frameIndex];
+    img.src = ROTATION_FRAMES_FILENAME[frameIndex];
 
-    // From 300px to 400px
-    setHeight(400 - latest * 100);
     img.onload = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       ctx.drawImage(img, 0, 0);
@@ -42,7 +38,7 @@ export default function DeviceScrollAnimation() {
     if (!canvas) return;
     const ctx = canvas.getContext("2d");
     const img = new Image();
-    img.src = DEVICE_FRAMES_FILENAMES[0];
+    img.src = ROTATION_FRAMES_FILENAME[0];
     img.onload = () => {
       canvas.width = img.width;
       canvas.height = img.height;
@@ -51,14 +47,15 @@ export default function DeviceScrollAnimation() {
   }, []);
 
   return (
-    <div className="w-80" ref={(r) => (wrapperRef.current = r)}>
+    <div
+      className="w-full mx-auto h-[3000px] relative mt-[300px]"
+      ref={(r) => (wrapperRef.current = r)}
+    >
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-seeable-dark" />
       <canvas
         ref={(r) => (canvasRef.current = r)}
-        className="sticky transition-all"
-        style={{
-          height: `${height}px`,
-        }}
-      ></canvas>
+        className="top-1/2 -translate-y-1/2 sticky mx-auto transition-all w-[90vw] lg:w-max"
+      />
     </div>
   );
 }
