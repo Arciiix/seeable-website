@@ -3,7 +3,7 @@ import CardAlternative from "../../ui/card-alternative/CardAlternative";
 export default function Achievements() {
   return (
     <div className="flex flex-col items-center w-full">
-      <span className="text-5xl lg:text-7xl text-center bg-gradient-to-r from-yellow-300 to-yellow-500 text-transparent bg-clip-text font-bold">
+      <span className="text-5xl lg:text-7xl text-center bg-gradient-to-r from-yellow-300 to-yellow-500 text-transparent bg-clip-text font-bold px-2">
         What have we achieved so far?
       </span>
       <span className="text-2xl mt-4 text-yellow-200 text-center w-1/2">
