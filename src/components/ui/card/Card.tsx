@@ -31,7 +31,7 @@ export default function Card({
       />
 
       <div
-        className={`relative w-full p-7 bg-white text-black rounded-b-3xl ${cardBackground}`}
+        className={`relative w-full p-7 text-black rounded-b-3xl ${cardBackground}`}
       >
         <div
           className={`flex bg-gradient-to-r from-amber-100 to-yellow-400 text-black rounded-2xl w-max gap-4 m-1 p-2 ${badgeBackground}`}

@@ -20,7 +20,7 @@ export default function Hero() {
         <div className="relative pt-36 ml-auto">
           <div className="lg:w-2/3 text-center mx-auto">
             <AnimatePresence>
-              <h1 key="title">
+              <h1 key="title" className="flex flex-wrap justify-center">
                 {"Everybody deserves to see.".split(" ").map((element, i) => (
                   <motion.span
                     key={element}

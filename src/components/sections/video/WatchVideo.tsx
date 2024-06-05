@@ -4,7 +4,7 @@ export default function WatchVideo() {
       className="w-full mx-auto bg-gradient-to-b from-seeable-dark to-seeable-light text-seeable p-8 font-rubik
     "
     >
-      <span className="bg-gradient-to-r from-amber-100 to-yellow-400 text-transparent w-full block bg-clip-text text-center my-5 p-8 font-medium text-7xl ">
+      <span className="bg-gradient-to-r from-amber-100 to-yellow-400 text-transparent w-full block bg-clip-text text-center my-5 p-8 font-medium text-5xl lg:text-7xl ">
         Video says more than{" "}
         <b
           className="
