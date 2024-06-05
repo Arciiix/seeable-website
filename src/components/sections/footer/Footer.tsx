@@ -1,8 +1,12 @@
-import { IconBrandGithub, IconBrandLinkedin } from "@tabler/icons-react";
+import {
+  IconBrandGithub,
+  IconBrandLinkedin,
+  IconWorld,
+} from "@tabler/icons-react";
 
 export default function Footer() {
   return (
-    <div className="w-full bg-seeable bg-opacity-40 text-seeable p-8 grid grid-cols-1 lg:grid-cols-3 text-3xl font-rubik">
+    <div className="w-full bg-seeable bg-opacity-40 text-seeable p-8 grid grid-cols-1 lg:grid-cols-[1fr_2fr_1fr] text-3xl font-rubik">
       <div className="flex items-center">
         <img
           src="/logo/logo-hexagon-empty.png"
@@ -11,7 +15,7 @@ export default function Footer() {
         />
         &copy; Seeable
       </div>
-      <p className="flex justify-center items-center gap-3">
+      <p className="gap-3 flex items-center justify-center flex-wrap lg:justify-start w-max max-w-full lg:mx-auto">
         Made with ❤️ by{" "}
         <a
           className="text-yellow-200 underline hover:text-yellow-300 transition-all"
@@ -22,6 +26,16 @@ export default function Footer() {
         </a>
       </p>
       <div className="flex gap-2 justify-end items-center">
+        <a
+          className="group"
+          href="https://arturnowak.netlify.app/"
+          target="_blank"
+        >
+          <IconWorld
+            className="group-hover:scale-110 transition-all"
+            size={32}
+          />
+        </a>
         <a
           className="group"
           href="https://www.linkedin.com/in/arciiix/"

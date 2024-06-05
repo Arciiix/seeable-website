@@ -21,7 +21,7 @@ export default function Card({
   badgeBackground,
 }: CardProps) {
   return (
-    <div className="group font-rubik flex flex-col items-center justify-center rounded-3xl overflow-hidden m-6 w-96 h-full transition-all hover:drop-shadow-glow">
+    <div className="group font-rubik flex flex-col items-center justify-center rounded-3xl overflow-hidden m-6 w-72 md:w-96 h-full transition-all hover:drop-shadow-glow">
       <video
         className="group-hover:scale-105 transition-all ease-in-out rounded-t-3xl w-96 overflow-hidden"
         src={videoUrl}

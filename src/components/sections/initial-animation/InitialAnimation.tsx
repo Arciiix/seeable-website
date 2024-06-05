@@ -152,7 +152,7 @@ export default function InitialAnimation({
                 if you were
               </motion.span>
               <motion.span
-                className="text-8xl font-medium text-seeable-dark text-outline-seeable"
+                className="text-6xl text-center lg:text-8xl font-medium text-seeable-dark text-outline-seeable w-screen break-all px-2 hyphens-auto"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0 }}
