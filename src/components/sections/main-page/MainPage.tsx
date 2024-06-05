@@ -1,4 +1,5 @@
 import LiDARRotationAnimation from "../../animations/LiDARRotationAnimation";
+import AboutUs from "../about-us/AboutUs";
 import Achievements from "../achivements/Achievements";
 import Adventages from "../adventages/Adventages";
 import Cards from "../cards/Cards";
@@ -16,6 +17,7 @@ export default function MainPage() {
       <Adventages />
       <WatchVideo />
       <Achievements />
+      <AboutUs />
       <LiDARRotationAnimation />
       <Footer />
     </div>
