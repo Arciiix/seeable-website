@@ -10,7 +10,10 @@ import Card from "../../ui/card/Card";
 
 export default function Cards() {
   return (
-    <div className="break-inside-avoid gap-x-1 mx-auto w-max sm:columns-1 lg:columns-2 xl:columns-3 m-5">
+    <div
+      id="getStarted"
+      className="break-inside-avoid gap-x-1 mx-auto w-max sm:columns-1 lg:columns-2 xl:columns-3 m-5"
+    >
       <Card
         videoUrl="/videos/Seeable_0_mapping.mp4"
         description="Create a comprehensive and precise map of your environment, ensuring you're always aware of what's nearby."

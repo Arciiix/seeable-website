@@ -1,6 +1,7 @@
 export default function WatchVideo() {
   return (
     <div
+      id="video"
       className="w-full mx-auto bg-gradient-to-b from-seeable-dark to-seeable-light text-seeable p-8 font-rubik
     "
     >

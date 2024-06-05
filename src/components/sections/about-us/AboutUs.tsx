@@ -6,7 +6,7 @@ import {
 
 export default function AboutUs() {
   return (
-    <div>
+    <div id="aboutUs">
       <h1
         className="mx-auto bg-gradient-to-r  from-rose-400 to-pink-400 text-transparent bg-clip-text text-center my-5 p-8 font-medium text-5xl lg:text-7xl
       "

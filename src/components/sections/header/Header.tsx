@@ -12,8 +12,10 @@ export default function Header() {
   };
 
   const navLinks = [
-    { href: "/#home", text: "Home" },
-    { href: "/#features", text: "Features" },
+    { href: "/#getStarted", text: "Features" },
+    { href: "/#video", text: "Video" },
+    { href: "/#achievements", text: "Achievements" },
+    { href: "/#aboutUs", text: "About Us" },
   ];
 
   return (
@@ -85,7 +87,7 @@ export default function Header() {
 
               <div className="lg:mt-0 mt-12">
                 <a
-                  href="/#home"
+                  href="/#getStarted"
                   className="relative flex h-9 w-full items-center justify-center px-4 before:absolute before:inset-0 before:bg-primary before:rounded-full before:transition before:duration-300 hover:before:scale-105 active:before:scale-95 active:duration-75 sm:w-max"
                 >
                   <span className="relative font-semibold text-sm text-white">
