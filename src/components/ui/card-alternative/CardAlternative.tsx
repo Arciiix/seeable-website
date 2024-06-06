@@ -23,12 +23,16 @@ export default function CardAlternative({
       <div
         className={`flex flex-col items-center lg:flex-row p-4 bg-white gap-5 rounded-b-2xl`}
       >
-        <img className="w-48 rounded-2xl" src={imageURL} alt={title} />
         <div className="flex flex-col gap-3">
           <div className="flex justify-between text-sm">
             <span>{place}</span>
             <span>{range}</span>
           </div>
+          <img
+            className="w-8/12 mx-auto rounded-2xl"
+            src={imageURL}
+            alt={title}
+          />
           <span className="text-3xl bg-gradient-to-r from-yellow-400 to-yellow-600 text-transparent bg-clip-text font-bold">
             {title}
           </span>
