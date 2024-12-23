@@ -16,7 +16,7 @@ export default function WatchVideo() {
       </span>
       <iframe
         className="mx-auto w-[80vw] h-[calc(80vw/1.77)] rounded-2xl"
-        src="https://www.youtube.com/embed/fxxcoQIjl68?si=W6yGT0o3wq1iPnh6"
+        src="https://www.youtube.com/embed/qrnMIw_VRnE?si=nbrJfwcq7j4f8Rtg"
         title="YouTube video player"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerPolicy="strict-origin-when-cross-origin"
