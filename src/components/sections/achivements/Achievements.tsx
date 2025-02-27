@@ -7,7 +7,7 @@ export default function Achievements() {
         What have we achieved so far?
       </span>
       <span className="text-2xl mt-4 text-yellow-200 text-center w-1/2">
-        Here are just a few of our successes 🏆
+        Here are just a few of our achievements 🏆
       </span>
       <div className="flex flex-wrap items-center justify-center">
         <CardAlternative
