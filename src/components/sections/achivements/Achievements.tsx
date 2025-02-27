@@ -9,12 +9,19 @@ export default function Achievements() {
       <span className="text-2xl mt-4 text-yellow-200 text-center w-1/2">
         Here are just a few of our successes 🏆
       </span>
-      <div className="flex flex-wrap justify-center">
+      <div className="flex flex-wrap items-center justify-center">
         <CardAlternative
           title="YOUNG E-NNOVATOR PITCH @ E-NNOVATE 2024"
           description="Young E-NNOVATOR Pitch is a contest created to enable the young innovators, inventors and entrepreneurs to present their idea to the industry and get validation, feedback, mentoring and funding."
           imageURL="/images/achievements/E-NNOVATE Young Innovator Pitch.jpeg"
           place="1st place"
+          range="international"
+        />
+        <CardAlternative
+          title="IPITEx 2025"
+          description="Bangkok International Intellectual Property, Invention, Innovation and Technology Exposition (IPITEx) is an annual international exhibition in Thailand that showcases inventions and innovations, fostering global collaboration and technological advancement. Seeable was awarded the gold medal in the international range."
+          imageURL="/images/achievements/IPITEx.jpeg"
+          place="gold medal"
           range="international"
         />
         <CardAlternative
