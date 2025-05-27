@@ -3,6 +3,7 @@ import AboutUs from "../about-us/AboutUs";
 import Achievements from "../achivements/Achievements";
 import Adventages from "../adventages/Adventages";
 import Cards from "../cards/Cards";
+import Contact from "../contact/Contact";
 import Footer from "../footer/Footer";
 import Header from "../header/Header";
 import Hero from "../hero/Hero";
@@ -18,6 +19,7 @@ export default function MainPage() {
       <WatchVideo />
       <Achievements />
       <AboutUs />
+      <Contact />
       <LiDARRotationAnimation />
       <Footer />
     </div>

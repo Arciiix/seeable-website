@@ -187,6 +187,7 @@ const resources = {
           video: "Video",
           achievements: "Achievements",
           aboutUs: "About Us",
+          contact: "Contact",
         },
         getStarted: "Get Started",
       },
@@ -238,6 +239,18 @@ const resources = {
         highlight: "a thousand words",
         videoUrl:
           "https://www.youtube.com/embed/qrnMIw_VRnE?si=nbrJfwcq7j4f8Rtg",
+      },
+      contact: {
+        title: "Get in Touch",
+        sendDirectEmail: "Send Email Directly",
+        form: {
+          email: "Your Email",
+          message: "Your Message",
+          send: "Send Message",
+          placeholder: "Type your message here...",
+          successMessage:
+            "Thank you for reaching out! Your message has been sent successfully.",
+        },
       },
     },
   },
@@ -428,6 +441,7 @@ const resources = {
           video: "Wideo",
           achievements: "Osiągnięcia",
           aboutUs: "O nas",
+          contact: "Kontakt",
         },
         getStarted: "Rozpocznij",
       },
@@ -479,6 +493,19 @@ const resources = {
         highlight: "tysiąc słów",
         videoUrl:
           "https://www.youtube.com/embed/MpXjCVghOMQ?si=PWbmjj5-k44_S3eO",
+      },
+
+      contact: {
+        title: "Skontaktuj się z nami",
+        sendDirectEmail: "Wyślij e-mail bezpośrednio",
+        form: {
+          email: "Twój e-mail",
+          message: "Twoja wiadomość",
+          send: "Wyślij wiadomość",
+          placeholder: "Napisz swoją wiadomość tutaj...",
+          successMessage:
+            "Dziękujemy za wiadomość! Skontaktujemy się z Tobą jak najszybciej.",
+        },
       },
     },
   },
