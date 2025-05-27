@@ -1,8 +1,11 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
+import ChangeLanguageButton from "../../language/ChangeLanguageButton";
 
 // Credit for design idea: Talius UI (MIT License)
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { t } = useTranslation();
 
   const params = new URLSearchParams(window.location.search);
   const fromPortfolio = params.get("fromPortfolio") === "true";
@@ -12,10 +15,10 @@ export default function Header() {
   };
 
   const navLinks = [
-    { href: "#getStarted", text: "Features" },
-    { href: "#video", text: "Video" },
-    { href: "#achievements", text: "Achievements" },
-    { href: "#aboutUs", text: "About Us" },
+    { href: "#getStarted", text: t("header.navLinks.features") },
+    { href: "#video", text: t("header.navLinks.video") },
+    { href: "#achievements", text: t("header.navLinks.achievements") },
+    { href: "#aboutUs", text: t("header.navLinks.aboutUs") },
   ];
 
   return (
@@ -23,11 +26,14 @@ export default function Header() {
       {fromPortfolio ? (
         <div className="w-full bg-seeable-dark bg-opacity-30 p-3 text-seeable font-medium text-center">
           <a
-            className="hover:text-yellow-100 transition-all
-        "
+            className="hover:text-yellow-100 transition-all"
             href="https://arturnowak.netlify.app/"
           >
-            ✨ {fromPortfolio ? "Go back to" : "Go check my"} portfolio
+            ✨{" "}
+            {fromPortfolio
+              ? t("header.portfolio.goBack")
+              : t("header.portfolio.checkPortfolio")}{" "}
+            portfolio
           </a>
         </div>
       ) : null}
@@ -63,7 +69,7 @@ export default function Header() {
               }`}
             ></div>
             <div
-              className={`invisible absolute top-full left-0 z-20 w-full origin-top-right translate-y-1 flex-col flex-wrap justify-end gap-6 bg-gray-900 p-8 opacity-0 rounded-3xl border border-gray-100 shadow-2xl transition-all duration-300 lg:visible lg:relative lg:flex lg:w-7/12 lg:flex-row lg:items-center lg:gap-0 lg:bg-transparent lg:opacity-100 lg:shadow-none lg:border-none lg:scale-100 lg:translate-y-0 ${
+              className={`invisible absolute top-full left-0 z-20 w-full origin-top-right translate-y-1 flex-col flex-wrap justify-end gap-6 bg-gray-900 p-8 opacity-0 rounded-3xl border border-gray-100 shadow-2xl transition-all duration-300 lg:visible lg:relative lg:flex lg:w-8/12 lg:flex-row lg:items-center lg:gap-0 lg:bg-transparent lg:opacity-100 lg:shadow-none lg:border-none lg:scale-100 lg:translate-y-0 ${
                 menuOpen
                   ? "!visible !scale-100 !opacity-100 !lg:translate-y-0"
                   : ""
@@ -85,16 +91,18 @@ export default function Header() {
                 </ul>
               </div>
 
-              <div className="lg:mt-0 mt-12">
+              <div className="lg:mt-0 lg:block hidden">
                 <a
                   href="#getStarted"
                   className="relative flex h-9 w-full items-center justify-center px-4 before:absolute before:inset-0 before:bg-primary before:rounded-full before:transition before:duration-300 hover:before:scale-105 active:before:scale-95 active:duration-75 sm:w-max"
                 >
                   <span className="relative font-semibold text-sm text-white">
-                    Get Started
+                    {t("header.getStarted")}
                   </span>
                 </a>
               </div>
+
+              <ChangeLanguageButton />
             </div>
           </div>
         </div>

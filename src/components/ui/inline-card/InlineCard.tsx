@@ -1,7 +1,7 @@
 import { Icon } from "@tabler/icons-react";
 import { motion } from "framer-motion";
 
-type InlineCardProps = {
+export type InlineCardProps = {
   title: string;
   description: string;
   textColor: string;

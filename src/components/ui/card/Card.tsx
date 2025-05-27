@@ -1,6 +1,6 @@
 import { Icon } from "@tabler/icons-react";
 
-type CardProps = {
+export type CardProps = {
   videoUrl: string;
   title: string;
   description: string;

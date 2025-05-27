@@ -1,4 +1,4 @@
-type CardAlternativeProps = {
+export type CardAlternativeProps = {
   title: string;
   description: string;
   imageURL: string;

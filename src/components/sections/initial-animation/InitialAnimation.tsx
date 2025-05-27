@@ -2,6 +2,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import Button from "../../ui/buttons/Button";
 import { ROTATION_FRAMES_FILENAME } from "../../animations/LiDARRotationAnimation";
+import { useTranslation } from "react-i18next";
+import ChangeLanguageButton from "../../language/ChangeLanguageButton";
 
 type InitialAnimationProps = {
   handleCancelInitialAnimation: () => void;
@@ -20,9 +22,8 @@ let alreadyCachedImages = false;
 const preloadImages = async () => {
   if (alreadyCachedImages) return;
   alreadyCachedImages = true;
-  console.log("Preload images");
 
-  const promises = await ROTATION_FRAMES_FILENAME.map((src) => {
+  const promises = ROTATION_FRAMES_FILENAME.map((src) => {
     return new Promise((resolve, reject) => {
       const img = new Image();
       img.src = src;
@@ -31,13 +32,12 @@ const preloadImages = async () => {
     });
   });
   await Promise.all(promises);
-
-  console.log("Images preloaded");
 };
 
 export default function InitialAnimation({
   handleCancelInitialAnimation,
 }: InitialAnimationProps) {
+  const { t } = useTranslation();
   const [animationStage, setAnimationStage] = useState<AnimationStage>("logo");
 
   const handleSkip = () => {
@@ -80,6 +80,9 @@ export default function InitialAnimation({
               initial={{ opacity: 1 }}
               exit={{ opacity: 0 }}
             >
+              <div className="absolute top-0 right-0 p-4">
+                <ChangeLanguageButton />
+              </div>
               <motion.img
                 className="h-64"
                 src="/logo/logo-hexagon-empty.png"
@@ -96,10 +99,10 @@ export default function InitialAnimation({
                 exit={{ opacity: 0 }}
                 transition={{ duration: 1 }}
               >
-                Seeable
+                {t("initialAnimation.logo.title")}
               </motion.span>
               <div className="flex gap-1 text-seeable text-opacity-90 text-2xl m-3 flex-wrap justify-center">
-                {"Navigation and Warning System for Wheelchair Users with Visual Impairments"
+                {t("initialAnimation.logo.subtitle")
                   .split(" ")
                   .map((el, i) => (
                     <motion.span
@@ -121,7 +124,9 @@ export default function InitialAnimation({
                 exit={{ opacity: 0 }}
                 transition={{ duration: 1, delay: 1 }}
               >
-                <Button onClick={handleSkip}>Skip</Button>
+                <Button onClick={handleSkip}>
+                  {t("initialAnimation.logo.skipButton")}
+                </Button>
               </motion.div>
             </motion.div>
           )}
@@ -139,7 +144,7 @@ export default function InitialAnimation({
                 exit={{ opacity: 0 }}
                 transition={{ duration: 1 }}
               >
-                Imagine
+                {t("initialAnimation.imagineYourself.line1")}
               </motion.span>
               <motion.span
                 key="test"
@@ -149,16 +154,17 @@ export default function InitialAnimation({
                 exit={{ opacity: 0 }}
                 transition={{ duration: 1, delay: 1 }}
               >
-                if you were
+                {t("initialAnimation.imagineYourself.line2")}
               </motion.span>
               <motion.span
+                key="test2"
                 className="text-6xl text-center lg:text-8xl font-medium text-seeable-dark text-outline-seeable w-screen break-all px-2 hyphens-auto"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 1, delay: 2 }}
               >
-                blindfolded
+                {t("initialAnimation.imagineYourself.line3")}
               </motion.span>
             </motion.div>
           )}
@@ -170,7 +176,7 @@ export default function InitialAnimation({
               exit={{ opacity: 0 }}
             ></motion.div>
           )}
-          {animationStage === "feelsHard" ? (
+          {animationStage === "feelsHard" && (
             <motion.div
               className="bg-black flex items-center justify-center flex-col w-screen h-screen"
               initial={{ opacity: 0 }}
@@ -184,7 +190,7 @@ export default function InitialAnimation({
                 exit={{ opacity: 0 }}
                 transition={{ duration: 1 }}
               >
-                It feels hard,
+                {t("initialAnimation.feelsHard.line1")}
               </motion.span>
               <motion.span
                 className="text-6xl font-medium text-white"
@@ -193,10 +199,10 @@ export default function InitialAnimation({
                 exit={{ opacity: 0 }}
                 transition={{ duration: 1, delay: 1 }}
               >
-                doesn't it?
+                {t("initialAnimation.feelsHard.line2")}
               </motion.span>
             </motion.div>
-          ) : null}
+          )}
         </AnimatePresence>
       </div>
     </div>
