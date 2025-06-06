@@ -4,6 +4,9 @@ export default {
   darkMode: "class",
   theme: {
     extend: {
+      animation: {
+        "fade-in": "fadeIn 0.4s ease-out both",
+      },
       colors: {
         seeable: "#dac500",
         "seeable-dark": "#3f3a13",
@@ -21,6 +24,12 @@ export default {
       },
       fontFamily: {
         rubik: ["Rubik", "sans-serif"],
+      },
+      keyframes: {
+        fadeIn: {
+          "0%": { opacity: 0, transform: "translateY(10px)" },
+          "100%": { opacity: 1, transform: "translateY(0)" },
+        },
       },
     },
   },

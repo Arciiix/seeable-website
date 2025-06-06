@@ -4,6 +4,10 @@ import { initReactI18next } from "react-i18next";
 const resources = {
   en: {
     translation: {
+      cookies: {
+        title: "We use cookies to improve your experience.",
+        accept: "I understand",
+      },
       aboutUs: {
         title: "Who are we?",
         roles: {
@@ -273,6 +277,10 @@ const resources = {
   },
   pl: {
     translation: {
+      cookies: {
+        title: "Używamy plików cookie, aby ulepszyć Twój komfort przeglądania.",
+        accept: "Rozumiem",
+      },
       aboutUs: {
         title: "Kim jesteśmy?",
         roles: {

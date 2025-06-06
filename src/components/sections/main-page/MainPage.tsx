@@ -1,4 +1,5 @@
 import LiDARRotationAnimation from "../../animations/LiDARRotationAnimation";
+import CookieNotice from "../../cookies/CookieNotice";
 import AboutUs from "../about-us/AboutUs";
 import Achievements from "../achivements/Achievements";
 import Adventages from "../adventages/Adventages";
@@ -12,6 +13,7 @@ import WatchVideo from "../video/WatchVideo";
 export default function MainPage() {
   return (
     <div>
+      <CookieNotice />
       <Header />
       <Hero />
       <Cards />
