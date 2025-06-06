@@ -33,6 +33,14 @@ const resources = {
         subtitle: "Here are just a few of our achievements 🏆",
         cards: [
           {
+            title: "Explory 2025",
+            description:
+              "Explory is the largest competition in Poland for young innovators, supporting STEAM projects. Seeable has advanced to the final stage of the competition (which will take place later this year).",
+            imageURL: "/images/achievements/Explory.jpg",
+            place: "finalist",
+            range: "national",
+          },
+          {
             title: "YOUNG E-NNOVATOR PITCH @ E-NNOVATE 2024",
             description:
               "Young E-NNOVATOR Pitch is a contest created to enable the young innovators, inventors and entrepreneurs to present their idea to the industry and get validation, feedback, mentoring and funding.",
@@ -44,7 +52,7 @@ const resources = {
           {
             title: "IPITEx 2025",
             description:
-              "Bangkok International Intellectual Property, Invention, Innovation and Technology Exposition (IPITEx) is an annual international exhibition in Thailand that showcases inventions and innovations, fostering global collaboration and technological advancement. Seeable was awarded the gold medal in the international range.",
+              "Bangkok International Intellectual Property, Invention, Innovation and Technology Exposition (IPITEx) is an annual international exhibition in Thailand that showcases inventions and innovations, fostering global collaboration and technological advancement. Seeable was awarded the gold medal.",
             imageURL: "/images/achievements/IPITEx.jpeg",
             place: "gold medal",
             range: "international",
@@ -53,10 +61,19 @@ const resources = {
             title:
               "OLIMPIADA INNOWACJI TECHNICZNYCH W ELEKTRONICE I MECHATRONICE",
             description:
-              "A nationwide competition for the best technical innovations in electronics and mechatronics. This competition is listed on the official Poland's Ministry Of Education list of competitions. Seeable was awarded the 2nd place in the nation-wide range, first having to qualify to the national final by advancing at the school and regional level.",
+              "A nationwide competition for the best technical innovations in electronics and mechatronics. This competition is listed on the official Poland's Ministry Of Education list of competitions. Seeable was awarded the 2nd place.",
             imageURL: "/images/achievements/Olimpiada.jpg",
             place: "2nd place",
-            range: "nation-wide",
+            range: "national",
+          },
+
+          {
+            title: "Young Inventor @ INTARG 2025",
+            description:
+              "INTARG is an international innovation show held in Poland. Seeable had the honor of presenting at this prestigious event thanks to securing the 3rd place in the Young Inventor competition, organized by the Haller Pro Inventio Foundation.",
+            imageURL: "/images/achievements/INTARG.jpeg",
+            place: "3rd place",
+            range: "national",
           },
           {
             title: "E-NNOVATE 2024",
@@ -285,6 +302,14 @@ const resources = {
         subtitle: "Oto tylko niektóre z naszych sukcesów 🏆",
         cards: [
           {
+            title: "Explory 2025",
+            description:
+              "Explory to największy w Polsce konkurs dla młodych innowatorów wspierający projekty STEAM. Seeable awansowało do finału, który odbędzie się później w tym roku.",
+            imageURL: "/images/achievements/Explory.jpg",
+            place: "finalista",
+            range: "ogólnopolski",
+          },
+          {
             title: "YOUNG E-NNOVATOR PITCH @ E-NNOVATE 2024",
             description:
               "Young E-NNOVATOR Pitch to konkurs stworzony z myślą o młodych innowatorach, wynalazcach i przedsiębiorcach, umożliwiający im zaprezentowanie swoich pomysłów przed branżą i zdobycie cennego feedbacku, mentoringu oraz finansowania.",
@@ -296,7 +321,7 @@ const resources = {
           {
             title: "IPITEx 2025",
             description:
-              "IPITEx to coroczna, międzynarodowa wystawa w Tajlandii, promująca wynalazki i innowacje. Seeable zostało nagrodzone złotym medalem w międzynarodowej kategorii.",
+              "IPITEx to coroczna, międzynarodowa wystawa w Tajlandii, promująca wynalazki i innowacje. Seeable zostało nagrodzone złotym medalem.",
             imageURL: "/images/achievements/IPITEx.jpeg",
             place: "złoty medal",
             range: "międzynarodowy",
@@ -308,6 +333,15 @@ const resources = {
               "Ogólnopolski konkurs na najlepsze innowacje techniczne w dziedzinie elektroniki i mechatroniki, wpisany na oficjalną listę konkursów Ministerstwa Edukacji. Seeable zajęło 2. miejsce w finale krajowym po wcześniejszym przejściu etapów szkolnego i regionalnego.",
             imageURL: "/images/achievements/Olimpiada.jpg",
             place: "2. miejsce",
+            range: "ogólnopolski",
+          },
+
+          {
+            title: "Młody Wynalazca @ INTARG 2025",
+            description:
+              "INTARG to międzynarodowe targi innowacji odbywające się w Polsce. Seeable miało zaszczyt zaprezentować się na tym prestiżowym wydarzeniu dzięki zdobyciu 3. miejsca w konkursie Młody Wynalazca, organizowanym przez fundację Haller Pro Inventio.",
+            imageURL: "/images/achievements/INTARG.jpeg",
+            place: "3. miejsce",
             range: "ogólnopolski",
           },
           {
