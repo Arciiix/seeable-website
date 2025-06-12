@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://seeable.zs6sobieski.pl/sitemap.xml
