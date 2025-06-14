@@ -28,6 +28,8 @@ export default function Card({
         autoPlay
         loop
         muted
+        controls={false}
+        playsInline
       />
 
       <div
